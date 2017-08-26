@@ -1,0 +1,14 @@
+how to build iso 
+
+
+xorrisofs -o system-($arch).iso     \
+          -b boot/isolinux/isolinux.bin \
+          -c boot.cat                   \
+          -no-emul-boot                 \
+          -boot-load-size 4             \
+          -boot-info-table              \
+          -joliet -l -R                 \
+          iso($arch)
+
+note : installer in boot/install.sfs 
+       file name mustbe install.sfs
